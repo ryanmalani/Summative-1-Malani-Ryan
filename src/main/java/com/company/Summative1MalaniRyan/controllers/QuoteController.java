@@ -53,18 +53,10 @@ public class QuoteController {
 
         for (int i = 0; i < quoteList.size(); i++) {
             index = quoteListRandomizer.nextInt(quoteList.size()); // setting index to random number within size of arraylist
+            returnQuote = quoteList.get(index); // getting object at random index and setting it to return object
             break;
-        }
-
-        for (Quote quote : quoteList) {
-            if (quote.getId() == index) { // finding the object in quoteList with the randomly picked index
-                returnQuote = quote; // setting the return object to the randomly picked object
-                break;
-            }
         }
 
         return returnQuote; // returning quote object at random index
     }
-
-
 }

@@ -60,14 +60,8 @@ public class MagicController {
 
         for (int i = 0; i < magicList.size(); i++) {
             index = magicListRandomizer.nextInt(magicList.size()); // setting index to random number within size of arraylist
+            magicAnswer.setAnswer(magicList.get(index).getAnswer()); // getting object at random index, getting answer of object, and setting return object answer to that
             break;
-        }
-
-        for (Magic ball : magicList) {
-            if (ball.getId() == index) {
-                magicAnswer.setAnswer(ball.getAnswer()); // setting the answer parameter of the return object to answer of the randomly picked object in magicList
-                break;
-            }
         }
 
         magicList.add(magicAnswer); // adding the return object to magicList

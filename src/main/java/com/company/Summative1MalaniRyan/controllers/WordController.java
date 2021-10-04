@@ -50,14 +50,8 @@ public class WordController {
 
         for (int i = 0; i < wordList.size(); i++) {
             index = wordListRandomizer.nextInt(wordList.size()); // setting index to random number within size of arraylist
+            returnWord = wordList.get(index); // getting object from wordList at random index and setting return object equal to it
             break;
-        }
-
-        for (Word word : wordList) {
-            if (word.getId() == index) { // finding the word object in wordList with the randomly picked index
-                returnWord = word; // setting the return object to the found randomly picked object
-                break;
-            }
         }
 
         return returnWord; // returning quote object at random index
